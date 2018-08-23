@@ -1,4 +1,4 @@
-FROM duluca/minimal-node-build-env
+FROM duluca/minimal-node-build-env as builder
 
 # project variables
 ENV SRC_DIR /usr/src
