@@ -12,7 +12,7 @@ jobs:
         name: Install dependencies
         command: |
           if [ ! -d node_modules ]; then
-            apk add --update nodejs
+            apk add --update nodejs nodejs-npm
           fi
     - run:
         name: Build Docker Image
