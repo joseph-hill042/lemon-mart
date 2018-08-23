@@ -9,6 +9,12 @@ jobs:
     - setup_remote_docker:
         docker_layer_caching: false
     - run:
+        name: Install dependencies
+        command: |
+          if [ ! -d node_modules ]; then
+            apk add --update nodejs
+          fi
+    - run:
         name: Build Docker Image
         command: |
           npm run build:ci
